@@ -1,17 +1,22 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-TwoWire encoder1 = TwoWire(0);
-TwoWire encoder2 = TwoWire(1);
+// Configure I2C for joint 1 and 2's encoders.
+TwoWire encoder1{ 0 }; // = TwoWire(0);
+TwoWire encoder2{ 1 }; // = TwoWire(1);
 
-// This function setups the microcontroller's pins.
-// Args: None
-// Returns: None
+/***
+ * @brief. Defines GPIO pins and sets I/O state. 
+ * 
+ * @param. void.
+ * @return void.
+ */
 void setup()
 {
     encoder1.begin(GPIO_NUM_23, GPIO_NUM_22);
     encoder2.begin(GPIO_NUM_19, GPIO_NUM_18);
     
+    // configure serial port.
     Serial.begin(115200);
 
     // Configure LEDs
@@ -42,9 +47,12 @@ void setup()
 
 }
 
-// This function executes the program's instructions continuously.
-// Args: None
-// Returns: None
+/***
+ * @brief. Reads and writes to GPIO pins.
+ * 
+ * @param. void.
+ * @return. void.
+*/
 void loop()
 {
     // Get data from analog inputs
