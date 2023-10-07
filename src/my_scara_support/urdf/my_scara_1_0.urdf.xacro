@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_scara_1_0">
+    <!-- Robot description -->
+    <xacro:include filename="$(find my_scara_support)/urdf/my_scara_1_0_macro.urdf.xacro"/>
+    <xacro:my_scara_1_0_macro/>
+
+    <!-- ros2_control -->
+    <xacro:include filename="$(find my_scara_support)/urdf/my_scara_1_0.ros2_control.xacro" />
+    <xacro:my_scara_1_0_ros2_control/>
+</robot>

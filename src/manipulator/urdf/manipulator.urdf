@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="manipulator">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.029207 -2.8317E-17 0.024645"
+        rpy="0 0 0" />
+      <mass
+        value="1.253" />
+      <inertia
+        ixx="0.0031229"
+        ixy="2.4435E-18"
+        ixz="9.8215E-06"
+        iyy="0.0059461"
+        iyz="1.6593E-18"
+        izz="0.0087331" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.4 0.69804 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="coupler_1">
+    <inertial>
+      <origin
+        xyz="-6.93889390390723E-17 0.0072813688212928 -1.52926106285397E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.139427808957131" />
+      <inertia
+        ixx="7.74222121811178E-05"
+        ixy="-2.15639217181064E-20"
+        ixz="1.49941345073938E-23"
+        iyy="0.000147610246557407"
+        iyz="-4.44282125203463E-20"
+        izz="7.74222121811179E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/coupler_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.4 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/coupler_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="0.075 0 0.05"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="coupler_1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.07 0.0250821742955448 1.19366003801782E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.721333334319362" />
+      <inertia
+        ixx="0.000655553125789509"
+        ixy="3.93955170157901E-18"
+        ixz="1.30862557845303E-19"
+        iyy="0.00349317611606045"
+        iyz="-1.43475926986585E-19"
+        izz="0.00305285544145848" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.4 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="weld_1"
+    type="fixed">
+    <origin
+      xyz="0 0.02 0"
+      rpy="0 0 0" />
+    <parent
+      link="coupler_1" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="coupler_2">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0.00728136882129281 -1.53599210807692E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.139427808957131" />
+      <inertia
+        ixx="7.74222121811178E-05"
+        ixy="-2.15483588593893E-20"
+        ixz="-3.26514687756594E-23"
+        iyy="0.000147610246557407"
+        iyz="-4.43472149629924E-20"
+        izz="7.74222121811179E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/coupler_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.4 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/coupler_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="continuous">
+    <origin
+      xyz="0.14 0.05 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="coupler_2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.07 0.0150687991093598 5.45898405902557E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.553340131043985" />
+      <inertia
+        ixx="0.000396370069121465"
+        ixy="1.75469734242297E-18"
+        ixz="-2.31728491249587E-20"
+        iyy="0.00248541752718653"
+        iyz="-4.95250314999852E-21"
+        izz="0.00212974960002337" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.4 0.698039215686274 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="weld_2"
+    type="fixed">
+    <origin
+      xyz="0 0.02 0"
+      rpy="0 0 0" />
+    <parent
+      link="coupler_2" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="end_effector">
+    <inertial>
+      <origin
+        xyz="0.100349198973376 0.000353822159549988 6.33217529944508E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.229959232623262" />
+      <inertia
+        ixx="8.30636492252994E-05"
+        ixy="2.72527313421035E-07"
+        ixz="-1.21412680251909E-06"
+        iyy="0.00101485834427373"
+        iyz="4.63968105310965E-13"
+        izz="0.00101637867937415" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/end_effector.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.686274509803922 0.686274509803922 0.686274509803922 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/end_effector.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="weld_3"
+    type="fixed">
+    <origin
+      xyz="0.14 0.03 0"
+      rpy="0 0 1.57079632679489" />
+    <parent
+      link="link_2" />
+    <child
+      link="end_effector" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_link_2">
+    <inertial>
+      <origin
+        xyz="-1.93846480835157E-17 0.024090333234571 1.45866755534296E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0817024345002187" />
+      <inertia
+        ixx="1.15959600743729E-05"
+        ixy="-2.81250895749826E-22"
+        ixz="2.37855501503455E-22"
+        iyy="2.2515945470037E-05"
+        iyz="1.65216229905391E-09"
+        izz="1.16205082096749E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/motor_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/motor_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_weld_2"
+    type="fixed">
+    <origin
+      xyz="0 0.0974 0"
+      rpy="3.14159265358979 1.5707963267949 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="motor_link_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motor_link_1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/motor_link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/motor_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motor_weld_1"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0974"
+      rpy="-1.5707963267949 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="motor_link_1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

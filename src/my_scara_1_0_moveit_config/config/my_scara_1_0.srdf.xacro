@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_scara_1_0">
+
+  <xacro:include filename="$(find my_scara_1_0_moveit_config)/config/my_scara_1_0_macro.srdf.xacro"/>
+  <xacro:my_scara_1_0_srdf_macro/>
+</robot>

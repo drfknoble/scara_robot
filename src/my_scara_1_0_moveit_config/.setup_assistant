@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: my_scara_support
+    relative_path: urdf/scara_1_0.urdf.xacro
+  srdf:
+    relative_path: config/my_scara_1_0.srdf
+  config:
+    author_name: Frazer Noble
+    author_email: f.k.noble@massey.ac.nz
+    generated_timestamp: 1675149405

@@ -1,0 +1,27 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: manipulator
+    relative_path: urdf/manipulator.urdf
+  srdf:
+    relative_path: config/manipulator.srdf
+  package_settings:
+    author_name: Frazer Noble
+    author_email: f.k.noble@massey.ac.nz
+    generated_timestamp: 1675723777
+  control_xacro:
+    command:
+      - position
+      - velocity
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+      - velocity
+    state:
+      - position
+      - velocity

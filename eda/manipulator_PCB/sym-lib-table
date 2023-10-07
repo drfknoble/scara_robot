@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "my_library")(type "KiCad")(uri "G:/My Drive/projects/block_bot/pcb/block_bot/my_library.kicad_sym")(options "")(descr ""))
+)

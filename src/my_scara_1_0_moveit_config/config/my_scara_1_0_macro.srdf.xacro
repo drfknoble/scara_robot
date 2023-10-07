@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro">
+    <xacro:macro name="my_scara_1_0_srdf_macro">
+        <!-- group names -->
+        <group name="manipulator">
+            <chain base_link="base" tip_link="end_effector" />
+        </group>
+        <!-- group states -->
+        <group_state name="all_zero" group="manipulator">
+            <joint name="joint_1" value="0" />
+            <joint name="joint_2" value="0" />
+        </group_state>
+        <!-- virtual joint -->
+        <virtual_joint name="virtual_joint" type="fixed" parent_frame="root_frame" child_link="base" />
+        <!-- disable collisions -->
+        <disable_collisions link1="base" link2="coupler_01" reason="Adjacent"/>
+        <disable_collisions link1="base" link2="coupler_02" reason="Never"/>
+        <disable_collisions link1="base" link2="end_effector" reason="Never"/>
+        <disable_collisions link1="base" link2="link_01" reason="Never"/>
+        <disable_collisions link1="base" link2="link_02" reason="Never"/>
+        <disable_collisions link1="base" link2="motor_01" reason="Adjacent"/>
+        <disable_collisions link1="base" link2="motor_02" reason="Never"/>
+        <disable_collisions link1="coupler_01" link2="coupler_02" reason="Never"/>
+        <disable_collisions link1="coupler_01" link2="end_effector" reason="Never"/>
+        <disable_collisions link1="coupler_01" link2="link_01" reason="Adjacent"/>
+        <disable_collisions link1="coupler_01" link2="link_02" reason="Never"/>
+        <disable_collisions link1="coupler_01" link2="motor_01" reason="Never"/>
+        <disable_collisions link1="coupler_01" link2="motor_02" reason="Never"/>
+        <disable_collisions link1="coupler_02" link2="end_effector" reason="Never"/>
+        <disable_collisions link1="coupler_02" link2="link_01" reason="Adjacent"/>
+        <disable_collisions link1="coupler_02" link2="link_02" reason="Adjacent"/>
+        <disable_collisions link1="coupler_02" link2="motor_01" reason="Never"/>
+        <disable_collisions link1="coupler_02" link2="motor_02" reason="Never"/>
+        <disable_collisions link1="end_effector" link2="link_01" reason="Never"/>
+        <disable_collisions link1="end_effector" link2="link_02" reason="Adjacent"/>
+        <disable_collisions link1="end_effector" link2="motor_01" reason="Never"/>
+        <disable_collisions link1="end_effector" link2="motor_02" reason="Never"/>
+        <disable_collisions link1="link_01" link2="link_02" reason="Never"/>
+        <disable_collisions link1="link_01" link2="motor_01" reason="Never"/>
+        <disable_collisions link1="link_01" link2="motor_02" reason="Adjacent"/>
+        <disable_collisions link1="link_02" link2="motor_01" reason="Never"/>
+        <disable_collisions link1="link_02" link2="motor_02" reason="Never"/>
+        <disable_collisions link1="motor_01" link2="motor_02" reason="Never"/>
+    </xacro:macro>
+</robot>
